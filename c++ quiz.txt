@@ -1,0 +1,103 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+string question[] = {"Name the capital of India", "Name the national bird of India", "Name the First Prime minister of India", "Name the first female president of India", "Name the youngest prime minister of India"};
+string options[5][4];
+options[0][0] = "1.Hyderabad";
+options[0][1] = "2.Delhi";
+options[0][2] = "3.punjab";
+options[0][3] = "4.Jammu";
+
+
+options[1][0] = "1.peacock";
+options[1][1] = "2.sparrow";
+options[1][2] = "3.crow";
+options[1][3] = "4.owl";
+
+
+options[2][0] = "1.Nehru";
+options[2][1] = "2.Gandhi";
+options[2][2] = "3.RD sharma";
+options[2][3] = "4.Chandra Bose";
+
+
+options[3][0] = "1.Prathiba Patel";
+options[3][1] = "2.Sonia Gandhi";
+options[3][2] = "2.Indira Gandhi";
+options[3][3] = "4.Aruna Asifa Ali";
+
+options[4][0] = "1.Rahul Gandhi";
+options[4][1] = "2.Indira Gandhi";
+options[4][2] = "3.Rajiv Gandhi";
+options[4][3] = "4.Sanjay Gandhi";
+
+int correctanswer[4];
+
+correctanswer[0] = 1;
+correctanswer[1] = 0;
+correctanswer[2] = 0;
+correctanswer[3] = 0;
+correctanswer[4] = 2;
+int marks = 0;
+int response[5];
+int option;
+do
+{
+cout<<endl;
+cout << ("QUIZ PROGRAM");
+cout<<endl;
+cout << ("***");
+cout<<endl;
+cout << ("1. Display Questions");
+cout<<endl;
+cout << ("2. Display Correct Answers");
+cout<<endl;
+cout << ("3. Display Result");
+cout<<endl;
+cout << ("4. EXIT");
+cout<<endl;
+cout << ("***");
+cout<<endl;
+cout<<endl;
+cout << ("Enter your option: ");
+cin >> option;
+switch (option)
+{
+case 1:
+for (int i = 0; i < 5; i++)
+{
+cout << question[i] << endl;
+for (int j = 0; j < 4; j++)
+{
+cout << options[i][j] << endl;
+}
+cout << "Enter your response" << endl;
+cin >> response[i];
+}
+break;
+case 2:
+for (int i = 0; i < 5; i++)
+{
+cout << question[i] << " ";
+cout<< options[i][correctanswer[i]];
+cout << endl;
+}
+
+break;
+case 3:
+marks = 0;
+for (int i = 0; i <= 4; i++)
+{
+if (correctanswer[i] + 1 == response[i])
+{
+marks++;
+}
+}
+cout<<marks<<endl;
+
+}
+}
+while (option != 4);
+
+}
